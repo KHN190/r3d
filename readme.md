@@ -28,6 +28,8 @@ setup() {
 If you are first time building the app,
 
 ```bash
+npm install
+
 cd src-tauri
 cargo build
 ```
