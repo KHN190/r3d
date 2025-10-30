@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>R3D ▶◣◍◢◀ Editor</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+  </style>
+  <script src="./js/p5@1.11.2/p5.min.1.11.2.js"></script>
+  <script src="./js/p5@1.11.2/p5.sound.min.1.11.2.js"></script>
+  <!-- three.js -->
+  <script type="importmap">
+      {
+          "imports": {
+              "three": "./js/three@0.180.0/three.webgpu.min.js",
+              "three/webgpu": "./js/three@0.180.0/three.webgpu.min.js",
+              "three/tsl": "./js/three@0.180.0/three.tsl.min.js",
+              "three/addons/": "./js/three@0.180.0/addons/"
+          }
+      }
+  </script>
+  <script type="module">
+    import * as THREE from "three/webgpu";
+    import { OBJLoader } from "three/addons/OBJLoader.js";
+    import { MTLLoader } from "three/addons/MTLLoader.js";
+  
+    window.THREE = THREE;
+    window.OBJLoader = OBJLoader;
+    window.MTLLoader = MTLLoader;
+  </script>
+  <script src="./js/perf/stats.min.0.17.0.js"></script>
+  <!-- modules -->
+  <script src="./js/r3d.js"></script>
+  <script src="./main.js"></script>
+
+</head>
+<body>
+</body>
+</html>

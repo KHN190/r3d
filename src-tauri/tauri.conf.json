@@ -1,0 +1,69 @@
+{
+  "$schema": "../node_modules/@tauri-apps/cli/schema.json",
+  "productName": "r3d",
+  "version": "0.1.0",
+  "identifier": "com.r3d.app",
+  "build": {
+    "beforeBuildCommand": "npm run prepare:dist",
+    "beforeDevCommand": "",
+    "frontendDist": "../"
+  },
+  "bundle": {
+    "active": true,
+    "category": "DeveloperTool",
+    "copyright": "",
+    "targets": "all",
+    "externalBin": [],
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ],
+    "resources": [],
+    "macOS": {
+      "entitlements": null,
+      "exceptionDomain": "",
+      "frameworks": [],
+      "providerShortName": null,
+      "signingIdentity": null
+    },
+    "linux": {
+      "deb": {
+        "depends": []
+      }
+    },
+    "windows": {
+      "certificateThumbprint": null,
+      "digestAlgorithm": "sha256",
+      "timestampUrl": ""
+    }
+  },
+  "app": {
+    "macOSPrivateApi": true,
+    "windows": [
+      {
+        "title": "r3d",
+        "width": 1200,
+        "height": 800,
+        "resizable": true,
+        "fullscreen": false,
+        "transparent": true,
+        "additionalBrowserArgs": "--enable-features=WebGPU --enable-unsafe-webgpu"
+      }
+    ],
+    "security": {
+      "csp": "default-src 'self' tauri: http://tauri.localhost; img-src 'self' data: blob: http: https: tauri:; media-src 'self' data: blob: http: https: tauri:; connect-src 'self' https://*; worker-src 'self' blob: tauri:; child-src 'self' blob:; script-src 'self' 'unsafe-inline' 'unsafe-eval' blob:; font-src 'self' data:; style-src 'self' 'unsafe-inline';"
+    },
+    "withGlobalTauri": true
+  },
+  "plugins": {
+    "shell": {
+      "scope": []
+    },
+    "fs": {
+      "scope": ["$RESOURCE/scenes/**"]
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "camera": {
+    "type": "PerspectiveCamera",
+    "fov": 75,
+    "near": 0.1,
+    "far": 1000,
+    "position": [0, 0, 5],
+    "lookAt": [0, 0, 0]
+  },
+  "lights": [
+    {
+      "type": "AmbientLight",
+      "color": "0xffffff",
+      "intensity": 0.6
+    },
+    {
+      "type": "DirectionalLight",
+      "color": "0xffffff",
+      "intensity": 0.8,
+      "position": [5, 10, 7.5]
+    }
+  ],
+  "objects": [
+    {
+      "type": "mesh",
+      "geometry": { "type": "BoxGeometry", "args": [1, 1, 1] },
+      "material": { 
+        "type": "MeshStandardMaterial",
+        "color": "0x00ff88",
+        "transparent": true,
+        "opacity": 0.8
+      }
+    }
+  ],
+  "postProcessing": {
+    "bloom": { "enabled": false },
+    "tone": "neutral"
+  }
+}
