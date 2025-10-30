@@ -1,0 +1,11 @@
+.DS_Store
+
+node_modules/
+dist/
+
+*.min.js
+*.min.*.js
+*.min.mjs
+*.min.*.mjs
+
+src-tauri/target/
