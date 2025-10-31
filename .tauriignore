@@ -1,0 +1,19 @@
+# excludes non-frontend files
+
+node_modules/
+
+package-lock.json
+yarn.lock
+
+.npm/
+.git/
+
+target/
+dist/
+build/
+
+src-tauri/target/
+src-tauri/binaries/
+src-tauri/gen/
+
+.gitignore
