@@ -9,6 +9,7 @@ fn main() {
       let _window = app.get_webview_window("main").unwrap();
       Ok(())
     })
+    .plugin(tauri_plugin_fs::init())
     .run(tauri::generate_context!())
     .expect("error while running tauri application");
 }

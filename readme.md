@@ -8,9 +8,11 @@ For samples, see [`./scenes`](./scenes). Each of the scenes have their own scrip
 
 R3D builds with Tauri, which runs on native webview.
 
-A game engine serves four purposes: *render* / *script* / *debug* / *build*. It may also include an editor - which you can use code editor in place of a visual one.
+A game engine serves four purposes: *render* \| *script* \| *debug* \| *build*. It may also include an editor.
 
-This allows R3D to run cross-platform with slightly render efficiency loss compared to Godot, which is neglectable, but gives accessibility to any JS runtime (e.g. transformer.js). CPU work / OS access can be either written in Rust (e.g. filesystem); or done with WASM. Initially I use this for integrating AI models for a project, it forked to be a standalone game engine by itself.
+This allows R3D to run cross-platform with slightly render efficiency loss compared to Godot, which is neglectable, but gives accessibility to any JS runtime (e.g. transformer.js). Only visuals are built by JS, while CPU work / OS access can be either written in Rust (e.g. filesystem); or done with WASM.
+
+Initially I use this for integrating AI models for a project, it forked to be a standalone game engine by itself.
 
 The build will be [much smaller](https://gethopp.app/blog/tauri-vs-electron) than the bloated Electron, while debug is obvious with any web developer tools - which I believe easier than Godot, Unity and Lua projects.
 
